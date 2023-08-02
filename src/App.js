@@ -1,7 +1,3 @@
-import "./App.css";
-import SearchBar from "./components/search/SearchBar";
-import SideBar from "./components/sidebar/SideBar";
-
 import LandingPage from "./pages/LandingPage";
 
 function App() {
