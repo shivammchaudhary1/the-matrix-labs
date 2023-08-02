@@ -2,6 +2,8 @@ import React from "react";
 import "./SideBar.css";
 import Footer from "../footer/Footer";
 import SocialIcons from "../social/SocialIcons";
+import Button from "../button/Button";
+import SearchBar from "../search/SearchBar";
 
 const SideBar = () => {
   return (
