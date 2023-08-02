@@ -1,0 +1,100 @@
+.LandingPage-container {
+  background: url("https://s3-alpha-sig.figma.com/img/51fd/bd7c/3cb3d57b1898d0d4ca08cb43c3373b86?Expires=1691971200&Signature=l720DEgbpV4hY-e6MSZiAc3MGWIcnUIrDor3cHd79WUH-c8VJ47YO-WV8A2EaVXiGODyCVCMWLBEbXqgQFdaCV~y6VCnoitrffV6duFUVcKMJ3bKhiRDZVUESo6n7ExwIBTLlXTGQiR9-4iJL9TzdKiYxmD6~f0H5F35RPgrrwtm4dRzT-XTME54BAFuafrN4NkNW~MrM8FlF7sofeXFqx~eQpcwp1-pBJVKhQJsg2fTEg04rE2L559dBibNcMjnT-kDlLjYwWo9jgJfHSOWSAngJv327XUEzNP44FxF8vQhL-frGKp2UXF4CjDwXjOr0ufN4k9M3w8xHhCuJ30L6A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+    no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 1564px;
+  height: 983px;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.57);
+}
+
+.LandingPage-child-container {
+  width: 70%;
+  height: 100vh;
+  border: 1px solid blue;
+  display: flex;
+  margin-left: 400px;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .searchResults {
+  border: 1px solid white;
+  width: 75%;
+  margin-left: 360px;
+  margin-top: 20px;
+  height: 500px;
+} */
+
+.searchbar_container {
+  position: fixed;
+  top: 20px; /* Adjust this value to set the desired vertical position */
+  left: 350px; /* Adjust this value to set the desired horizontal position */
+}
+
+.searchbar_container > input {
+  width: 435px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background: linear-gradient(
+    132deg,
+    rgba(124, 15, 53, 0.2) 0%,
+    rgba(88, 18, 102, 0.2) 100%
+  );
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 40px 0 20px;
+}
+
+.searchbar_container > input::placeholder {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.searchbar_container > svg {
+  /* padding-right: 10px; */
+  margin-left: -40px;
+}
+
+.button_container {
+  position: fixed;
+  top: 20px; /* Adjust this value to set the desired vertical position */
+  right: 40px; /* Adjust this value to set the desired horizontal position */
+}
+
+.button_container > button {
+  width: 156px;
+  height: 52px;
+  border-radius: 20px;
+  background: linear-gradient(131deg, #7c0f35 0%, #581266 100%);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-color: transparent;
+}
+
+.searchResults {
+  position: sticky;
+  top: 12%;
+  border: 1px solid white;
+  width: 70%;
+  margin-left: 450px;
+  margin-top: 20px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
