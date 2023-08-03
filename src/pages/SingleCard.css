@@ -1,7 +1,7 @@
 .singleCard-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 5px;
   margin-bottom: 12px;
 }
 .singleCard-container h3 {

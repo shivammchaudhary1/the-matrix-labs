@@ -1,4 +1,5 @@
 import "./App.css";
+import WagmiWallet from "./components/Web3Modal/WagmiWallet";
 
 import LandingPage from "./pages/LandingPage";
 import AllRoutes from "./routes/AllRoutes";
