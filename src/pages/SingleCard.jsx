@@ -1,5 +1,6 @@
 import React from "react";
 import "./SingleCard.css";
+import Circle from "../components/Circle";
 
 const SingleCard = ({
   baseToken,
@@ -14,6 +15,7 @@ const SingleCard = ({
     <div className="singleCard-container">
       <div className="baisc-info">
         <h3>Basic Info</h3>
+
         <div className="baisc-info-child">
           <p>Pair Created at</p> <p>Etherium</p>
           <p>Symbol</p>

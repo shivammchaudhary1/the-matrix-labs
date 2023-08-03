@@ -17,14 +17,14 @@
 } */
 
 .socialicons-container {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 100px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  bottom: 120px; /* Adjust the value as needed to set the distance from the bottom */
+  bottom: 120px;
   left: 5%;
   transform: translateX(-50%);
 }

@@ -13,11 +13,8 @@
 
 .LandingPage-child-container {
   width: 70%;
-
+  /* height: auto; */
   border: 1px solid blue;
-
-  align-items: center;
-  justify-content: space-between;
 }
 
 .searchbar_container {
@@ -31,7 +28,7 @@
   height: 50px;
   flex-shrink: 0;
   border-radius: 20px;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   background: linear-gradient(
     132deg,
     rgba(124, 15, 53, 0.2) 0%,
@@ -77,12 +74,13 @@
   font-weight: 400;
   line-height: normal;
   border-color: transparent;
+  cursor: pointer;
 }
 
 .searchResults {
   position: sticky;
   top: 12%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 75%;
   margin-left: 300px;
   margin-top: 20px;
