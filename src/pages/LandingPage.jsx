@@ -92,6 +92,8 @@ const LandingPage = () => {
                     quoteToken={e.quoteToken}
                     priceNative={e.priceNative}
                     priceUsd={e.priceUsd}
+                    pairaddress={e.pairAddress}
+                    dexId={e.dexId}
                   />
                 ))}
               </div>
