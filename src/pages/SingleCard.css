@@ -1,0 +1,38 @@
+.singleCard-container {
+}
+.singleCard-container h3 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.baisc-info {
+  width: 250px;
+  height: 158px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #390554;
+}
+.base-token {
+  width: 250px;
+  height: 158px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #390554;
+}
+.quote-token {
+  width: 250px;
+  height: 158px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #390554;
+}
+.price {
+  width: 250px;
+  height: 158px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #390554;
+}

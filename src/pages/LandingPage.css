@@ -1,3 +1,5 @@
+/* LandingPage.css */
+
 .LandingPage-container {
   background: url("https://s3-alpha-sig.figma.com/img/51fd/bd7c/3cb3d57b1898d0d4ca08cb43c3373b86?Expires=1691971200&Signature=l720DEgbpV4hY-e6MSZiAc3MGWIcnUIrDor3cHd79WUH-c8VJ47YO-WV8A2EaVXiGODyCVCMWLBEbXqgQFdaCV~y6VCnoitrffV6duFUVcKMJ3bKhiRDZVUESo6n7ExwIBTLlXTGQiR9-4iJL9TzdKiYxmD6~f0H5F35RPgrrwtm4dRzT-XTME54BAFuafrN4NkNW~MrM8FlF7sofeXFqx~eQpcwp1-pBJVKhQJsg2fTEg04rE2L559dBibNcMjnT-kDlLjYwWo9jgJfHSOWSAngJv327XUEzNP44FxF8vQhL-frGKp2UXF4CjDwXjOr0ufN4k9M3w8xHhCuJ30L6A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
     no-repeat center center fixed;
@@ -11,27 +13,17 @@
 
 .LandingPage-child-container {
   width: 70%;
-  height: 100vh;
+
   border: 1px solid blue;
-  display: flex;
-  margin-left: 400px;
-  padding-top: 20px;
+
   align-items: center;
   justify-content: space-between;
 }
 
-/* .searchResults {
-  border: 1px solid white;
-  width: 75%;
-  margin-left: 360px;
-  margin-top: 20px;
-  height: 500px;
-} */
-
 .searchbar_container {
   position: fixed;
-  top: 20px; /* Adjust this value to set the desired vertical position */
-  left: 350px; /* Adjust this value to set the desired horizontal position */
+  top: 20px;
+  left: 350px;
 }
 
 .searchbar_container > input {
@@ -64,14 +56,13 @@
 }
 
 .searchbar_container > svg {
-  /* padding-right: 10px; */
   margin-left: -40px;
 }
 
 .button_container {
   position: fixed;
-  top: 20px; /* Adjust this value to set the desired vertical position */
-  right: 40px; /* Adjust this value to set the desired horizontal position */
+  top: 20px;
+  right: 40px;
 }
 
 .button_container > button {
@@ -92,9 +83,26 @@
   position: sticky;
   top: 12%;
   border: 1px solid white;
-  width: 70%;
-  margin-left: 450px;
+  width: 75%;
+  margin-left: 300px;
   margin-top: 20px;
-  max-height: calc(100vh - 200px);
+  max-height: 70vh;
   overflow-y: auto;
+  padding: 10px;
+}
+
+.singleCard-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.SingleCard {
+  width: 200px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

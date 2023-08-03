@@ -5,7 +5,6 @@ import SideBar from "../components/sidebar/SideBar";
 const PairAddress = () => {
   return (
     <div>
-      PairAddress
       <div className="LandingPage-container">
         <SideBar />
         <div className="LandingPage-child-container">
