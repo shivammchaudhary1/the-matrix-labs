@@ -11,7 +11,6 @@ const LandingPage = () => {
   const [debouncedToken, setDebouncedToken] = useState("");
 
   useEffect(() => {
-    // Fetch initial data during mounting phase
     fetchData();
   }, []);
 

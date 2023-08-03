@@ -1,15 +1,68 @@
-import React from "react";
-import "./PairAddress.css";
+import React, { useState, useEffect } from "react";
+import "./LandingPage.css";
 import SideBar from "../components/sidebar/SideBar";
+import axios from "axios";
+import SingleCard from "./SingleCard";
 
 const PairAddress = () => {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+  const [token, setToken] = useState("");
+  const [debouncedToken, setDebouncedToken] = useState("");
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const delayTimer = setTimeout(() => {
+      setDebouncedToken(token);
+    }, 1000);
+
+    return () => clearTimeout(delayTimer);
+  }, [token]);
+
+  useEffect(() => {
+    if (debouncedToken.trim() !== "") {
+      setLoading(true);
+      fetchData(debouncedToken);
+    } else {
+      setData(null);
+      setLoading(false);
+    }
+  }, [debouncedToken]);
+
+  const handleInputChange = (e) => {
+    setToken(e.target.value);
+  };
+
+  const fetchData = async (
+    tkn = "0x7213a321F1855CF1779f42c0CD85d3D95291D34C"
+  ) => {
+    try {
+      const endpoint = `https://api.dexscreener.com/latest/dex/search/?q=${tkn}`;
+      const res = await axios.get(endpoint);
+      setData(res.data.pairs);
+      console.log(res.data.pairs);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       <div className="LandingPage-container">
         <SideBar />
         <div className="LandingPage-child-container">
           <div className="searchbar_container">
-            <input type="text" placeholder="Search" />
+            <input
+              type="text"
+              placeholder="Search"
+              value={token}
+              onChange={handleInputChange}
+            />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -28,7 +81,27 @@ const PairAddress = () => {
           </div>
         </div>
 
-        <div className="searchResults"></div>
+        <div className="searchResults">
+          {loading ? (
+            <div className="loader">Loading...</div>
+          ) : (
+            data && (
+              <div className="cards-container">
+                {data.map((e) => (
+                  <SingleCard
+                    key={e.id}
+                    baseToken={e.baseToken}
+                    quoteToken={e.quoteToken}
+                    priceNative={e.priceNative}
+                    priceUsd={e.priceUsd}
+                    pairaddress={e.pairAddress}
+                    dexId={e.dexId}
+                  />
+                ))}
+              </div>
+            )
+          )}
+        </div>
       </div>
     </div>
   );
